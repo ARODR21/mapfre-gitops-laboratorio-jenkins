@@ -21,7 +21,7 @@ pipeline {
         }
 		stage('Test') {
 			when {
-				branch "PR.*"
+				branch "PR-*"
 			}
             steps {
                 sh "[[ 'Encantado de saludarte, Pedro' = \$echo 'Pedro'|./ejercicio.sh pruebas ]]";
