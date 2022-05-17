@@ -19,12 +19,12 @@ pipeline {
                 '''
             }
         }
-		stage ('Test') {
+		stage ("Test") {
             when {
                 branch "PR-*"
             }
             steps {
-                echo "La prueba acabó bien"
+                sh "bash test.sh"
             }
         }
     }
